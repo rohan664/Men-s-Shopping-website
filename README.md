@@ -1,6 +1,6 @@
 # Men's Shopping-website
-👏 welcome to Men's Shopping website
-STEPS :
+👏 welcome to Men's Shopping website<br>
+STEPS :<br>
 👉Step 1 : First install xmapp sever in your local drive.<br>
 👉Step 2 : create folder in htdoc (go to C:\xampp\htdocs ) and download above code and save in created folder.<br>
 👉Step 3 : open xmapp control panel and start apache and mysql server.<br>
