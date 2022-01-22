@@ -1,0 +1,944 @@
+<?php
+  include('auth_session.php');
+?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+
+    <title>Powerlook-Men's Fashion</title>
+</head>
+<style>
+    *{
+        margin: 0;
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        box-sizing: border-box;
+    }
+
+    .first_navbar{
+      background-color:#ddd;
+      width: 100%;
+      height:20%;
+    
+    }
+
+    .first_navbar h6{
+      padding: 5px 5px;
+      float: right;
+      
+    }
+    .first_navbar p {
+      float:left;
+      padding:0px;
+      padding-left:10px;
+      font-size:20px
+    }
+
+    
+    .navbar{
+        background-color: white;
+        width: 100%;
+    }
+     .navbar img{
+       
+        width: 20%;
+        
+    } 
+    .topnav {
+    overflow: hidden;
+    background-color: #e9e9e9;
+    }
+
+  .topnav a {
+  float: left;
+  display: block;
+  color: black;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+  }
+
+
+
+  .topnav .search-container {
+  float: right;
+  }
+
+  .topnav input[type=text] {
+  padding: 6px;
+  margin-top: 8px;
+  font-size: 17px;
+  border: none;
+  }
+
+.topnav .search-container button {
+  float: right;
+  padding: 6px 10px;
+  margin-top: 8px;
+  margin-right: 16px;
+  background: #ddd;
+  font-size: 17px;
+  border: none;
+  cursor: pointer;
+}
+
+.topnav .search-container button:hover {
+  background: #ccc;
+}
+
+@media screen and (max-width: 600px) {
+  .topnav .search-container {
+    float: none;
+  }
+  .topnav a, .topnav input[type=text], .topnav .search-container button {
+    float: none;
+    display: block;
+    text-align: left;
+    width: 100%;
+    margin: 0;
+    padding: 14px;
+  }
+  .topnav input[type=text] {
+    border: 1px solid #ccc;  
+  }
+}
+
+.card{
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  transition: 0.3s;
+  border-radius:10px;
+ 
+}
+.card:hover{
+  box-shadow:  0 8px 16px 0 rgba(0,0,0,0.8);;
+}
+.container{
+  padding: 2px 16px;
+  border-radius:10px;
+  text-align:center;
+}
+
+.column {
+  float: left;
+  width: 16%;
+  padding: 0 10px;
+}
+
+/* Remove extra left and right margins, due to padding */
+.row {margin: 0 -5px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.row a{
+  color: black;
+  text-decoration: none;
+}
+
+.offer{
+  width: 100%;
+}
+
+.offer img{
+  padding: 10px 75px;
+} 
+
+/* Responsive columns */
+@media screen and (max-width: 600px) {
+  .column {
+    width: 100%;
+    display: block;
+    margin-bottom: 20px;
+  }
+  
+}
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap');
+
+body {
+    font-family: "Poppins", sans-serif;
+    color: #444444;
+}
+
+a,
+a:hover {
+    text-decoration: none;
+    color: inherit;
+}
+
+.section-products {
+    padding: 80px 0 54px;
+}
+
+.section-products .header {
+    margin-bottom: 50px;
+}
+
+.section-products .header h3 {
+    font-size: 1rem;
+    color: #fe302f;
+    font-weight: 500;
+}
+
+.section-products .header h2 {
+    font-size: 2.2rem;
+    font-weight: 400;
+    color: #444444; 
+}
+
+.section-products .single-product {
+    margin-bottom: 26px;
+}
+
+.section-products .single-product .part-1 {
+    position: relative;
+    height: 290px;
+    max-height: 290px;
+    margin-bottom: 20px;
+    overflow: hidden;
+}
+
+.section-products .single-product .part-1::before {
+		position: absolute;
+		content: "";
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		z-index: -1;
+		transition: all 0.3s;
+}
+
+.section-products .single-product:hover .part-1::before {
+		transform: scale(1.2,1.2) rotate(5deg);
+}
+
+.section-products #product-1 .part-1::before {
+    background: url("images/dp-1_15.jpg") no-repeat center;
+    background-size: cover;
+		transition: all 0.3s;
+}
+
+.section-products #product-2 .part-1::before {
+    background: url("images/dp_927.jpg") no-repeat center;
+    background-size: cover;
+}
+
+.section-products #product-3 .part-1::before {
+    background: url("images/1_862_1.jpg") no-repeat center;
+    background-size: cover;
+}
+
+.section-products #product-4 .part-1::before {
+    background: url("images/30_1_12.jpg") no-repeat center;
+    background-size: cover;
+}
+
+.section-products #product-5 .part-1::before {
+    background: url("images/681.jpg") no-repeat center;
+    background-size: cover;
+}
+
+.section-products #product-6 .part-1::before {
+    background: url("images/dp_926.jpg") no-repeat center;
+    background-size: cover;
+}
+
+.section-products #product-7 .part-1::before {
+    background: url("images/dp_921.jpg") no-repeat center;
+    background-size: cover;
+}
+
+.section-products #product-8 .part-1::before {
+    background: url("images/dp_948.jpg") no-repeat center;
+    background-size: cover;
+}
+
+.section-products .single-product .part-1 .discount,
+.section-products .single-product .part-1 .new {
+    position: absolute;
+    top: 15px;
+    left: 20px;
+    color: #ffffff;
+    background-color: #fe302f;
+    padding: 2px 8px;
+    text-transform: uppercase;
+    font-size: 0.85rem;
+}
+
+.section-products .single-product .part-1 .new {
+    left: 0;
+    background-color: #444444;
+}
+
+.section-products .single-product .part-1 ul {
+    position: absolute;
+    bottom: -41px;
+    left: 20px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    opacity: 0;
+    transition: bottom 0.5s, opacity 0.5s;
+}
+
+.section-products .single-product:hover .part-1 ul {
+    bottom: 30px;
+    opacity: 1;
+}
+
+.section-products .single-product .part-1 ul li {
+    display: inline-block;
+    margin-right: 4px;
+}
+
+.section-products .single-product .part-1 ul li a {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    background-color: #ffffff;
+    color: #444444;
+    text-align: center;
+    box-shadow: 0 2px 20px rgb(50 50 50 / 10%);
+    transition: color 0.2s;
+}
+
+.section-products .single-product .part-1 ul li a:hover {
+    color: #fe302f;
+}
+
+.section-products .single-product .part-2 .product-title {
+    font-size: 1rem;
+}
+
+.section-products .single-product .part-2 h4 {
+    display: inline-block;
+    font-size: 1rem;
+}
+
+.section-products .single-product .part-2 .product-old-price {
+    position: relative;
+    padding: 0 7px;
+    margin-right: 2px;
+    opacity: 0.6;
+}
+
+.section-products .single-product .part-2 .product-old-price::after {
+    position: absolute;
+    content: "";
+    top: 50%;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background-color: #444444;
+    transform: translateY(-50%);
+}
+
+.view-product{
+  background-color: white;
+  border: none;
+  color: white;
+  padding: 12px 50px;
+  text-align: center;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+}
+
+.button{
+  background-color: white; 
+  color: black; 
+  border: 2px solid maroon;
+}
+
+.button:hover{
+  color: white;
+  background-color:maroon;
+
+}
+
+.center{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.quality{
+  margin-left: 40px;
+ 
+  
+}
+.premium_quality{
+
+  width:300px;
+  float: left;
+
+}
+
+.secure_payments{
+  width: 300px;
+  float:left;
+  margin-left:200px
+}
+
+.return{
+  width: 300px;
+  float: right;
+}
+/* fotter css */
+a {
+  color: #6c757d;
+}
+
+a:hover {
+  color: #fec503;
+  text-decoration: none;
+}
+
+::-moz-selection {
+  background: #fec503;
+  text-shadow: none;
+}
+
+::selection {
+  background: #fec503;
+  text-shadow: none;
+}
+
+footer {
+  padding: 2rem 0;
+  background-color: #212529;
+}
+
+.footer-column:not(:first-child) {
+  padding-top: 2rem;
+}
+
+@media (min-width: 768px) {
+  .footer-column:not(:first-child) {
+    padding-top: 0rem;
+  }
+}
+
+.footer-column {
+  text-align: center;
+}
+
+.footer-column .nav-item .nav-link {
+  padding: 0.1rem 0;
+}
+
+.footer-column .nav-item span.nav-link {
+  color: #6c757d;
+}
+
+.footer-column .nav-item span.footer-title {
+  font-size: 14px;
+  font-weight: 700;
+  color: #fff;
+  text-transform: uppercase;
+}
+
+.footer-column .nav-item .fas {
+  margin-right: 0.5rem;
+}
+
+.footer-column ul {
+  display: inline-block;
+}
+
+@media (min-width: 768px) {
+  .footer-column ul {
+    text-align: left;
+  }
+}
+
+ul.social-buttons {
+  margin-bottom: 0;
+}
+
+ul.social-buttons li a:active,
+ul.social-buttons li a:focus,
+ul.social-buttons li a:hover {
+  background-color: #fec503;
+}
+
+ul.social-buttons li a {
+  font-size: 20px;
+  line-height: 40px;
+  display: block;
+  width: 40px;
+  height: 40px;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  color: #fff;
+  border-radius: 100%;
+  outline: 0;
+  background-color: #1a1d20;
+}
+
+footer .quick-links {
+  font-size: 90%;
+  line-height: 40px;
+  margin-bottom: 0;
+  text-transform: none;
+  font-family: Montserrat, "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.copyright {
+  color: white;
+}
+
+.fa-ellipsis-h {
+  color: white;
+  padding: 2rem 0;
+}
+/*# dropdown login button */
+
+.dropdown {
+  position: relative;
+  float:right;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  padding: 12px 16px;
+  z-index: 1;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+
+  </style>
+<body>
+  <div class="first_navbar">
+  <p>Hey,<?php echo $_SESSION['username']; ?>!</p> 
+  <a href="locator.html"><h6>Store Locator</h6></a>
+  <h6>|</h6>
+  <a href="contact.html"><h6>contact us</h6></a> 
+  <h6>|</h6>
+  <a href="index.php"><h6>Home</h6></a>
+  <h6>|</h6>
+  <div class="dropdown">
+  <h6 style="color:#666">SignIn</h6>
+  <div class="dropdown-content">
+  <a href="login.php">SignIn</a><br><hr>
+  <a href="logout.php">SignOut</a>
+  </div>
+</div>
+  
+  
+    <br>
+    <hr>
+  </div>
+  
+   <div class="navbar">
+     
+      <img class="logo" src="https://www.powerlook.in/assets/images/web-logo.svg" alt="logo">
+      
+    </div>
+      
+    <div class="topnav">
+        <a href="tshirt.html">T-SHIRTS</a>
+        <a href="shirt.html">SHIRTS</a>
+        <a href="bottom.html">BOTTOMS</a>
+        <a href="jackets.html">JACKETS</a>
+        <a href="coodes.html">CO-OEDS</a>
+        <a href="accessories.html">ACCESSORIES</a>
+        <div class="search-container">
+          <form action="index.php" method="get" id="searchform">
+            <input type="text" placeholder="Search.." name="search" id="test">
+            <button type="submit"><i class="fa fa-search"></i></button>
+          </form>
+        </div>
+      </div>
+
+     
+
+      <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img class="d-block w-100" src="images/img2.jpg" alt="First slide">
+          </div>
+          <div class="carousel-item">
+            <img class="d-block w-100" src="images/img1.jpg" alt="Second slide">
+          </div>
+        </div>
+        <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="sr-only">Next</span>
+        </a>
+      </div>
+      <br><br>
+
+      <div>
+        <h3 style="text-align: center;font-weight: bolder;">Explore Products</h3>
+        <h3 style="text-align: center;color: rgb(216, 68, 68);font-size: 50px;">---</h3>
+        
+      </div>
+
+      <div class="row justify-content-center">
+        <div class="column">
+          <div class="card">
+              <img src="images/shirts.jpg" alt="" style="border-radius: 5px 5px 0 0;" >
+            <div class="container">
+              <a href="shirt.html"><h5 style="font-weight: bolder;">SHIRTS</h5></a>
+            </div>
+            </div>
+          </div>
+
+        <div class="column">
+          <div class="card">
+            <img src="images/Shoes.jpg" alt="" style="border-radius: 5px 5px 0 0;" >
+          <div class="container">
+             <a href="accessories.html"><h5 style="font-weight: bolder;">SHOES</h5></a>
+           </div>
+          </div>
+        </div>
+
+        <div class="column">
+          <div class="card">
+           <img src="images/bottoms.jpg" alt="" style="border-radius: 5px 5px 0 0;;" >
+           <div class="container">
+             <a href="bottom.html"><h5 style="font-weight: bolder;">BOTTOMS</h5></a>
+           </div>
+            
+          </div>
+        </div>
+
+        <div class="column">
+          <div class="card">
+           <img src="images/jackets.jpg" alt="" style="border-radius: 5px 5px 0 0;;" >
+           <div class="container">
+             <a href="jackets.html"><h5 style="font-weight: bolder;">JACKETS</h5></a>
+           </div>
+            
+          </div>
+        </div>
+
+        <div class="column">
+          <div class="card">
+           <img src="images/tshirt.jpg" alt="" style="border-radius: 5px 5px 0 0;;" >
+           <div class="container">
+             <a href="tshirt.html"><h5 style="font-weight: bolder;">T-SHIRTS</h5></a>
+           </div>
+            
+          </div>
+        </div>
+
+        <div class="column">
+          <div class="card">
+           <img src="images/co_ords.jpg" alt="" style="border-radius: 5px 5px 0 0;;" >
+           <div class="container">
+             <a href="coodes.html"><h5 style="font-weight: bolder;">CO-ORDS</h5></a>
+           </div>
+            
+          </div>
+        </div>
+      
+      </div>
+
+      <br><br><br>
+
+
+      <div class="offer justify-content-center">
+        <h3 style="text-align: center;font-weight: bolder;">Showstopping Trios</h3>
+        <p  style="text-align: center;font-weight:lighter;font-size: 20px;">Shop any 3 of your Favorite Shirts now to unlock the Exclusive Offer</p>
+        <h3 style="text-align: center;color: rgb(216, 68, 68);font-size: 50px;">---</h3>
+        <img  style="width:80%; display: block;margin-left: auto;margin-right: auto;" src="images/small_banner.jpg" alt="">
+      </div>
+
+      <br><br><br>
+
+      <div class="best-product">
+        <h3 style="text-align: center;font-weight: bolder;">Best Product</h3>
+        <p  style="text-align: center;font-weight:lighter;font-size: 20px;">Way is there to get clothing you’re sure to love than by making it your know</p>
+        <h3 style="text-align: center;color: rgb(216, 68, 68);font-size: 50px;">---</h3>
+
+      </div>
+
+      <section class="section-products">
+        <div class="container">
+            <div class="row">
+                <!-- Single Product -->
+                <div class="col-md-6 col-lg-4 col-xl-3">
+                    <div id="product-1" class="single-product">
+                        <div class="part-1">
+                            
+                        </div>
+                        <div class="part-2">
+                            <h3 class="product-title">Purple Plain Hood Full Sleeves T Shirt</h3>
+                            <h4 class="product-old-price">₹1099</h4>
+                            <h4 class="product-price">₹720</h4>
+                        </div>
+                    </div>
+                </div>
+                <!-- Single Product -->
+                <div class="col-md-6 col-lg-4 col-xl-3">
+                    <div id="product-2" class="single-product">
+                        <div class="part-1">
+                            <span class="discount">15% off</span>
+                            
+                        </div>
+                        <div class="part-2">
+                            <h3 class="product-title">Grey Donald Duck Oversize Drop Shoulder Shirt</h3>
+                            <h4 class="product-price">₹599</h4>
+                        </div>
+                    </div>
+                </div>
+                <!-- Single Product -->
+                <div class="col-md-6 col-lg-4 col-xl-3">
+                    <div id="product-3" class="single-product">
+                        <div class="part-1">
+                            
+                        </div>
+                        <div class="part-2">
+                            <h3 class="product-title">Mens Navy Blue Bomber Jacket</h3>
+                            <h4 class="product-old-price">₹2500</h4>
+                            <h4 class="product-price">₹1590</h4>
+                        </div>
+                    </div>
+                </div>
+                <!-- Single Product -->
+                <div class="col-md-6 col-lg-4 col-xl-3">
+                    <div id="product-4" class="single-product">
+                        <div class="part-1">
+                            <span class="new">new</span>
+                            
+                        </div>
+                        <div class="part-2">
+                            <h3 class="product-title">White Polo Neck Full Sleeves T Shirt</h3>
+                            <h4 class="product-price">₹950</h4>
+                        </div>
+                    </div>
+                </div>
+                <!-- Single Product -->
+                <div class="col-md-6 col-lg-4 col-xl-3">
+                    <div id="product-5" class="single-product">
+                        <div class="part-1">
+                            
+                        </div>
+                        <div class="part-2">
+                            <h3 class="product-title">Multi Color Mix Print Half Sleeves Shirt</h3>
+                            <h4 class="product-old-price">₹950</h4>
+                            <h4 class="product-price">₹450</h4>
+                        </div>
+                    </div>
+                </div>
+                <!-- Single Product -->
+                <div class="col-md-6 col-lg-4 col-xl-3">
+                    <div id="product-6" class="single-product">
+                        <div class="part-1">
+                            <span class="discount">15% off</span>
+                            
+                        </div>
+                        <div class="part-2">
+                            <h3 class="product-title">Peach and Blue Collar Attached Full Sleeves T Shirt</h3>
+                            <h4 class="product-price">₹650</h4>
+                        </div>
+                    </div>
+                </div>
+                <!-- Single Product -->
+                <div class="col-md-6 col-lg-4 col-xl-3">
+                    <div id="product-7" class="single-product">
+                        <div class="part-1">
+                            
+                        </div>
+                        <div class="part-2">
+                            <h3 class="product-title">Beige Panel Attached Oversize Drop Shoulder Tracksuit</h3>
+                            <h4 class="product-old-price">₹1500</h4>
+                            <h4 class="product-price">₹750</h4>
+                        </div>
+                    </div>
+                </div>
+                <!-- Single Product -->
+                <div class="col-md-6 col-lg-4 col-xl-3">
+                    <div id="product-8" class="single-product">
+                        <div class="part-1">
+                            <span class="new">new</span>
+                            
+                        </div>
+                        <div class="part-2">
+                            <h3 class="product-title">Mens Black Bulls Vest and Shorts Set</h3>
+                            <h4 class="product-price">₹800</h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="center">  
+          <a href="best_product.html"><button class="view-product button">VIEW ALL PRODUCT</button></a>
+        </div>
+    </section>
+
+    <div class="best-product">
+      <h3 style="text-align: center;font-weight: bolder;">New Oversized Collection</h3>
+      <p  style="text-align: center;font-weight:lighter;font-size: 20px;">Shop the most exciting colors & styles of the oversized trend</p>
+      <h3 style="text-align: center;color: rgb(216, 68, 68);font-size: 50px;">---</h3>
+      <img style="width:80%; display: block;margin-left: auto;margin-right: auto;" src="images/small_banner-2.jpg" alt="">
+    </div>
+
+    <br><br><br>
+
+    <div class="best-product">
+      <h3 style="text-align: center;font-weight: bolder;">Our Achievements</h3>
+      <h3 style="text-align: center;color: rgb(216, 68, 68);font-size: 50px;">---</h3>
+      <img style="width:80%; display: block;margin-left: auto;margin-right: auto;" src="images/product-sold-banner.jpg" alt="">
+    </div>
+    
+    <br><br>
+    
+    <!-- <div class="quality">
+      <div class="premium_quality">
+        
+        <h5><i class="fas fa-award"></i>  Premium Quality</h5>
+        <p>All the clothing products are made from 100% premium quality fabric.</p>
+      </div>
+
+      <div class="secure_payments" >
+        <h5><i class="fal fa-shield-check"></i>  Secure Payments</h5>
+        <p>Highly Secured SSL-Protected Payment Gateway.</p>
+      </div>
+
+      <div class="return" >
+        <h5><i class="fas fa-undo-alt"></i>  7 Days Return</h5>
+        <p>Return or exchange the orders within 7 days of delivery.</p>
+      </div>
+    </div>
+   -->
+    
+    <footer>
+      <div class="container">
+        <div class="row">
+          <div class="col-md-4 footer-column">
+            <ul class="nav flex-column">
+              <li class="nav-item">
+                <span class="footer-title">REGISTERED OFFICE ADDRESS</span>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">116/929-930,
+                  BEST Nagar Road, Motilal Nagar-1,
+                  Goregaon west Mumbai - 400104</a>
+              </li>
+              <br>
+              <li class="nav-item">
+                <span class="footer-title">OFFICE TIMINGS</span>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Mon - Sat : 10:30 am - 6:30 pm
+
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div class="col-md-4 footer-column">
+            <ul class="nav flex-column">
+              <li class="nav-item">
+                <span class="footer-title">Company</span>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="about.html">About us</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="shipping_policy.html">Shipping Policy</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="how_to_order.html">How to Order</a>
+              </li>
+            </ul>
+          </div>
+          <div class="col-md-4 footer-column">
+            <ul class="nav flex-column">
+              <li class="nav-item">
+                <span class="footer-title">Contact & Support</span>
+              </li>
+              <li class="nav-item">
+                <span class="nav-link"><i class="fas fa-phone"></i>+91 9324472762</span>
+              </li>
+             <br>
+             <li class="nav-item">
+              <span class="footer-title">Mail</span>
+            </li>
+            <li class="nav-item">
+              <span class="nav-link"><i class="fas fa-envelope"></i>support@powerlook.in</span>
+            </li>
+            </ul>
+          </div>
+        </div>
+    
+        <div class="text-center"><i class="fas fa-ellipsis-h"></i></div>
+        
+        <div class="row text-center">
+          <div class="col-md-4 box">
+            <span class="copyright quick-links">Copyright &copy; Your Website <script>document.write(new Date().getFullYear())</script>
+            </span>
+          </div>
+          <div class="col-md-4 box">
+            <ul class="list-inline social-buttons">
+              <li class="list-inline-item">
+                <a href="https://www.instagram.com/powerlookofficial/" target="_blank">
+                <i class="fab fa-instagram"></i>
+              </a>
+              </li>
+              <li class="list-inline-item">
+                <a href="https://www.facebook.com/powerlookofficial" target="_blank">
+                <i class="fab fa-facebook-f"></i>
+              </a>
+              </li>
+              <li class="list-inline-item">
+                <a href="https://in.pinterest.com/powerlookofficial/_created/" target="_blank">
+                <i class="fab fa-pinterest"></i>
+              </a>
+              </li>
+            </ul>
+          </div>
+          <div class="col-md-4 box">
+            <ul class="list-inline quick-links">
+              <li class="list-inline-item">
+                <a href="private_policy.html">Privacy Policy</a>
+              </li>
+              <li class="list-inline-item">
+                <a href="#">Terms of Use</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </footer>
+      
+      
+</body>
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+<script type="text/javascript">
+document.getElementById('searchform').onsubmit = function() {
+    window.location = 'http://localhost/shooping_website/' + document.getElementById('test').value + '.html';
+    return false;
+}
+</script>
+
+</html>

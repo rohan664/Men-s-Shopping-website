@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+
+    <title>Powerlook-Men's Fashion</title>
+</head>
+<style>
+    *{
+        margin: 0;
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        box-sizing: border-box;
+    }
+
+    a {
+        color: #6c757d;
+    }
+
+    a:hover {
+        color: #fec503;
+        text-decoration: none;
+    }
+
+    .first_navbar{
+      background-color:#ddd;
+      width: 100%;
+    }
+
+    .first_navbar h6{
+      padding: 5px 5px;
+      float: right;
+    }
+
+    .navbar{
+        background-color: white;
+        width: 100%;
+    }
+     .navbar img{
+       
+        width: 20%;
+    }
+
+    .topnav {
+    overflow: hidden;
+    background-color: #e9e9e9;
+    }
+
+  .topnav a {
+  float: left;
+  display: block;
+  color: black;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+  }
+
+
+
+  .topnav .search-container {
+  float: right;
+  }
+
+  .topnav input[type=text] {
+  padding: 6px;
+  margin-top: 8px;
+  font-size: 17px;
+  border: none;
+  }
+
+.topnav .search-container button {
+  float: right;
+  padding: 6px 10px;
+  margin-top: 8px;
+  margin-right: 16px;
+  background: #ddd;
+  font-size: 17px;
+  border: none;
+  cursor: pointer;
+}
+
+.topnav .search-container button:hover {
+  background: #ccc;
+}
+
+@media screen and (max-width: 600px) {
+  .topnav .search-container {
+    float: none;
+  }
+  .topnav a, .topnav input[type=text], .topnav .search-container button {
+    float: none;
+    display: block;
+    text-align: left;
+    width: 100%;
+    margin: 0;
+    padding: 14px;
+  }
+  .topnav input[type=text] {
+    border: 1px solid #ccc;  
+  }
+}
+.quality-box {
+            width:100%;
+            height:100px;
+            padding-left:20px;
+            padding-right:20px;
+        }
+        .st-box {
+            float:left;
+            width:300px;
+            height:100px;
+            background-color:white;
+           
+        }
+        .nd-box {
+            float:left;
+            width:300px;
+            height:100px;
+            background-color:white; 
+            margin-left:200px;
+        }
+        .rd-box {
+            float:right;
+            width:300px;
+            height:100px;
+            background-color:white;
+           
+        }
+        .container hr{display: block;
+            width: 30%;
+            height: 1%; 
+            background-color: brown;
+        }
+
+        
+        
+        .dir-button{
+            border: none;
+            background-color: brown;
+            color: white;
+            border-radius: 2px;
+            border: 2px solid brown;
+            cursor: pointer;
+           
+        }
+        .quality-box {
+            width:100%;
+            height:100px;
+            padding-left:20px;
+            padding-right:20px;
+        }
+        .st-box {
+            float:left;
+            width:300px;
+            height:100px;
+            background-color:white;
+           
+        }
+        .nd-box {
+            float:left;
+            width:300px;
+            height:100px;
+            background-color:white; 
+            margin-left:200px;
+        }
+        .rd-box {
+            float:right;
+            width:300px;
+            height:100px;
+            background-color:white;
+           
+        }
+
+        a {
+  color: #6c757d;
+}
+
+a:hover {
+  color: #fec503;
+  text-decoration: none;
+}
+
+::-moz-selection {
+  background: #fec503;
+  text-shadow: none;
+}
+
+::selection {
+  background: #fec503;
+  text-shadow: none;
+}
+
+footer {
+  padding: 2rem 0;
+  background-color: #212529;
+}
+
+.footer-column:not(:first-child) {
+  padding-top: 2rem;
+}
+
+@media (min-width: 768px) {
+  .footer-column:not(:first-child) {
+    padding-top: 0rem;
+  }
+}
+
+.footer-column {
+  text-align: center;
+}
+
+.footer-column .nav-item .nav-link {
+  padding: 0.1rem 0;
+}
+
+.footer-column .nav-item span.nav-link {
+  color: #6c757d;
+}
+
+.footer-column .nav-item span.footer-title {
+  font-size: 14px;
+  font-weight: 700;
+  color: #fff;
+  text-transform: uppercase;
+}
+
+.footer-column .nav-item .fas {
+  margin-right: 0.5rem;
+}
+
+.footer-column ul {
+  display: inline-block;
+}
+
+@media (min-width: 768px) {
+  .footer-column ul {
+    text-align: left;
+  }
+}
+
+ul.social-buttons {
+  margin-bottom: 0;
+}
+
+ul.social-buttons li a:active,
+ul.social-buttons li a:focus,
+ul.social-buttons li a:hover {
+  background-color: #fec503;
+}
+
+ul.social-buttons li a {
+  font-size: 20px;
+  line-height: 40px;
+  display: block;
+  width: 40px;
+  height: 40px;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  color: #fff;
+  border-radius: 100%;
+  outline: 0;
+  background-color: #1a1d20;
+}
+
+footer .quick-links {
+  font-size: 90%;
+  line-height: 40px;
+  margin-bottom: 0;
+  text-transform: none;
+  font-family: Montserrat, "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.copyright {
+  color: white;
+}
+
+.fa-ellipsis-h {
+  color: white;
+  padding: 2rem 0;
+}
+.container{
+    width: 80%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: left;
+   
+}
+.container p{
+    font-size: 120%;
+    color: #666666;
+}
+
+.container h5{
+   
+    padding: 5px;
+    font-weight: bolder;
+}
+
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 50%;
+}
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+  color: #666666;
+}
+.dropdown {
+  position: relative;
+  float:right;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  padding: 12px 16px;
+  z-index: 1;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+</style>
+<body>
+  <div class="first_navbar">
+   
+    <a href="locator.html"><h6>Store Locator</h6></a>
+    <h6>|</h6>
+    <a href="contact.html"><h6>contact us</h6></a> 
+    <h6>|</h6>
+    <a href="index.php"><h6>Home</h6></a>
+    <h6>|</h6>
+    <div class="dropdown">
+    <h6 style="color:#666">SignIn</h6>
+    <div class="dropdown-content">
+    <a href="login.php">SignIn</a><br><hr>
+    <a href="logout.php">SignOut</a>
+    </div>
+  </div>
+
+    <div class="navbar">
+     
+        <img class="logo" src="https://www.powerlook.in/assets/images/web-logo.svg" alt="logo">
+        
+    </div>
+
+    <div class="topnav">
+      <a href="tshirt.html">T-SHIRTS</a>
+      <a href="shirt.html">SHIRTS</a>
+      <a href="bottom.html">BOTTOMS</a>
+      <a href="jackets.html">JACKETS</a>
+      <a href="coodes.html">CO-OEDS</a>
+      <a href="accessories.html">ACCESSORIES</a>
+        <div class="search-container">
+          <form action="index.php" method="get" id="searchform">
+            <input type="text" placeholder="Search.." name="search" id="test">
+            <button type="submit"><i class="fa fa-search"></i></button>
+          </form>
+        </div>
+      </div>
+      <br>
+      <div style="width: 100%;">
+        <h3 style="text-align: center;font-weight: bolder;">TERMS AND CONDITIONS</h3>
+        <h3 style="text-align: center;color: rgb(216, 68, 68);font-size: 50px;">---</h3>
+        
+      </div>
+
+      <br><br>
+      
+      <div class="container">
+        <p>Access to and use of Powerlook.in and the products and services available through the website are subject to the following terms, conditions, and notices (“Terms of Service”). By browsing through these Terms of Service and using the services provided by our website (www.powerlook.in) you agree to all terms of Service along with the Privacy Policy on our website, which may be updated by us from time to time. Please check this page regularly to take notice of any changes we may have made to the Terms of Service.</p>
+        <p>We reserve the right to review and withdraw or amend the services without notice. We will not be liable if for any reason this Website is unavailable at any time or for any period. From time to time, we may restrict access to some parts or this entire Website.</p>
+        <h5>privacy</h5>
+        <p>Our Privacy Policy incorporated by reference in these Terms of Service sets out how we will use the personal information you provide to us. By using this Website, you agree to be bound by the Privacy Policy and warrant that all data provided by you is accurate and up to date.</p>
+        <h5>The exactness of the Product</h5>
+        <p>The images of the items on the website are for illustrative purposes only. Although we have made every effort to display the colors accurately, we cannot guarantee that your computer’s display of the colors accurately reflects the color of the items. Your items may vary slightly from those images.</p>
+        <p>All sizes and measurements of items are approximate; however, we do make every effort to ensure they are accurate as possible. We take all reasonable care to ensure that all details, descriptions, and prices of items are as accurate as possible.</p>
+        <h5>Pricing</h5>
+        <p>We ensure that all details of prices appearing on the website are accurate, however, errors may occur. If we discover an error in the price of any goods which you have ordered, we will inform you of this as soon as possible. If we are unable to contact you we will treat the order as canceled. If you cancel and you have already paid for the goods, you will receive a full refund.</p>
+        <p>Additionally, prices for items may change from time to time without notice. However, these changes will not affect orders that have already been dispatched. The price of an item includes GST (or similar sales tax) at the prevailing rate for which we are responsible as a seller. Please note that the prices listed on the website are only applicable for items purchased on the website and not through any other source.</p>
+        <h5>Discounts and Vouchers</h5>
+        <p>Any amount of voucher or discount deducted at the time of placing order deducted from the order value shall not be refunded on any cancellation or return of order.</p>
+        <h5>Payment</h5>
+        <p>Upon receiving your order we carry out a standard pre-authorization check on your payment card to ensure there are sufficient funds to fulfill the transaction. Goods will not be dispatched until this pre-authorization check has been completed. Your card will be debited once the order has been accepted.</p>
+        <p>Payment options are available-</p>
+        <ul style=" font-size: 120%;color: #666666;">
+            <li>paytm</li>
+            <li>Debit card/ Credit Card and</li>
+            <li>Cash on Delivery</li>
+        </ul>
+        <h5>Cash on Delivery charges (COD Charges)-</h5>
+        <p>COD charges shall be applicable of Rs.60 in case payment mode chosen as cash on delivery(Additional to shipping charges)
+            If your payment is debited to your account after a payment failure, it is normally rolled back to your bank account within 7 business days For any further clarification, you can email us on support@powerlook.in</p>
+        <h5>Violation & Termination</h5>
+        <p>ou agree that the Company may, in its sole discretion and without prior notice, terminate your access to the website and block your future access if we determine that you have violated these Terms of Service or any other policies. If you or the Company terminates your use of any service, you shall still be liable to pay for any service that you have already ordered.</p>
+        <p>If you have any questions, comments or requests regarding our Terms of Service or the website please contact us at support@powerlook.in</p>
+        <h5>Order Status</h5>
+        <p>You can check the status of the order by simply going to “order history” and refer the status column for the status.</p>
+        <h5>Service & Complaints:</h5>
+        <p>The satisfaction of our members is close to our hearts. Therefore we endeavor to deal with your concerns as quickly as possible and always provide you with our feedback after receiving your input. For service inquiries, please contact our customer service department: Email: support@powerlook.co.in</p>
+        <h5>Incorrect Order Or Product Damaged When Received:</h5>
+        <p>We take utmost care while packing your order to ensure that the right product reaches you in the safest way. However, in case of receiving the order, if the product is incorrect or is damaged in transit, the same would be replaced. The process is hassle-free.
+            In such cases, all you would have to do is that intimate us on the same day of receiving the order by writing to us at support@powerlook.in or calling us on the contact number mentioned on the Contact Us page and your request would be taken care of.
+            In case you fail to intimate on the same day of receiving an incorrect or damaged product, the product will be considered sold and would not be replaced or refunded.</p>
+        <h5>Returns</h5>
+        <p>No item purchased online can be returned at the store in any circumstances.</p>
+        <h5>Disclaimer of Guarantee:</h5>
+        <p>We do not guarantee, represent or warrant that your use of our service will be uninterrupted, timely, secure or error-free.
+
+            You agree that from time to time we may remove the service for indefinite periods of time or cancel the service at any time, without notice to you.
+            
+            You expressly agree that your use of, or inability to use, the service is at your sole risk. All products and services delivered to you through the service are (except as expressly stated by us) provided ‘as is’ and ‘as available’ for your use, without any representation, warranties or conditions of any kind, either express or implied, including all implied warranties or conditions of merchantability, merchantable quality, fitness for a particular purpose, durability and title.</p>
+      </div>
+      
+     <br><br><br> 
+
+     <footer>
+      <div class="container">
+        <div class="row">
+          <div class="col-md-4 footer-column">
+            <ul class="nav flex-column">
+              <li class="nav-item">
+                <span class="footer-title">REGISTERED OFFICE ADDRESS</span>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">116/929-930,
+                  BEST Nagar Road, Motilal Nagar-1,
+                  Goregaon west Mumbai - 400104</a>
+              </li>
+              <br>
+              <li class="nav-item">
+                <span class="footer-title">OFFICE TIMINGS</span>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Mon - Sat : 10:30 am - 6:30 pm
+
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div class="col-md-4 footer-column">
+            <ul class="nav flex-column">
+              <li class="nav-item">
+                <span class="footer-title">Company</span>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="about.html">About us</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="shipping_policy.html">Shipping Policy</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="how_to_order.html">How to Order</a>
+              </li>
+            </ul>
+          </div>
+          <div class="col-md-4 footer-column">
+            <ul class="nav flex-column">
+              <li class="nav-item">
+                <span class="footer-title">Contact & Support</span>
+              </li>
+              <li class="nav-item">
+                <span class="nav-link"><i class="fas fa-phone"></i>+91 9324472762</span>
+              </li>
+             <br>
+             <li class="nav-item">
+              <span class="footer-title">Mail</span>
+            </li>
+            <li class="nav-item">
+              <span class="nav-link"><i class="fas fa-envelope"></i>support@powerlook.in</span>
+            </li>
+            </ul>
+          </div>
+        </div>
+    
+        <div class="text-center"><i class="fas fa-ellipsis-h"></i></div>
+        
+        <div class="row text-center">
+          <div class="col-md-4 box">
+            <span class="copyright quick-links">Copyright &copy; Your Website <script>document.write(new Date().getFullYear())</script>
+            </span>
+          </div>
+          <div class="col-md-4 box">
+            <ul class="list-inline social-buttons">
+              <li class="list-inline-item">
+                <a href="https://www.instagram.com/powerlookofficial/" target="_blank">
+                <i class="fab fa-instagram"></i>
+              </a>
+              </li>
+              <li class="list-inline-item">
+                <a href="https://www.facebook.com/powerlookofficial" target="_blank">
+                <i class="fab fa-facebook-f"></i>
+              </a>
+              </li>
+              <li class="list-inline-item">
+                <a href="https://in.pinterest.com/powerlookofficial/_created/" target="_blank">
+                <i class="fab fa-pinterest"></i>
+              </a>
+              </li>
+            </ul>
+          </div>
+          <div class="col-md-4 box">
+            <ul class="list-inline quick-links">
+              <li class="list-inline-item">
+                <a href="private_policy.html">Privacy Policy</a>
+              </li>
+              <li class="list-inline-item">
+                <a href="terms_condition.html">Terms and Conditions</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </footer>
+      
+</body>
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+<script type="text/javascript">
+  document.getElementById('searchform').onsubmit = function() {
+      window.location = 'http://localhost/shooping_website/' + document.getElementById('test').value + '.html';
+      return false;
+  }
+  </script>
+</html>
